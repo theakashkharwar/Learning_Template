@@ -94,6 +94,27 @@ It helps you learn a topic practically by focusing on:
 - reusable checklist
 - mini report
 
+### `STUDY_TIME_ASSESSMENT_SKILL.md`
+
+Use this before starting a topic block when you are unsure whether your planned timeline is realistic.
+
+Examples:
+
+- "Can I learn XSS and SQLi in 4 days?"
+- "Can I finish IDOR, auth bugs, and sessions in one week?"
+- "Is 2 days enough for SSRF basics?"
+
+It helps you check:
+
+- whether your deadline is realistic
+- which topics are too broad
+- what can be learned in one day
+- what should be moved into follow-up one-day slices
+- what prerequisites are missing
+- how much time each topic may actually need
+- which repo files to use after the assessment
+- what corrected plan to follow if your estimate is wrong
+
 ### `PROGRESS_TRACKER_TEMPLATE.md`
 
 Use this once per week.
@@ -119,7 +140,8 @@ Recommended daily flow:
 4. Open `DAILY_OFFENSIVE_TEMPLATE.md`.
 5. Follow the 6-hour study routine.
 6. If studying a specific vulnerability, open `TOPIC_LEARNING_TEMPLATE.md`.
-7. At the end of the week, fill `PROGRESS_TRACKER_TEMPLATE.md`.
+7. If your topic list or deadline feels uncertain, use `STUDY_TIME_ASSESSMENT_SKILL.md`.
+8. At the end of the week, fill `PROGRESS_TRACKER_TEMPLATE.md`.
 
 ## When To Use Each File
 
@@ -141,6 +163,15 @@ Use `TOPIC_LEARNING_TEMPLATE.md` when:
 - you picked a vulnerability or concept
 - you want a practical learning method
 - you want to turn theory into labs, checklists, and reports
+
+Use `STUDY_TIME_ASSESSMENT_SKILL.md` when:
+
+- you picked multiple topics
+- you set a deadline
+- you are unsure if your estimate is realistic
+- you want to know the best one-day version of a topic
+- you want a corrected plan before starting
+- you need to know which files to use for that plan
 
 Use `PROGRESS_TRACKER_TEMPLATE.md` when:
 
@@ -227,4 +258,3 @@ Use it for:
 - authorized bug bounty programs
 
 Do not use it for attacking systems without permission.
-

@@ -18,7 +18,11 @@ Use these files in this order:
    - Use this whenever you study a specific topic such as IDOR, XSS, SQLi, CSRF, SSRF, authentication bugs, or business logic bugs.
    - This controls depth and prevents shallow learning.
 
-4. `PROGRESS_TRACKER_TEMPLATE.md`
+4. `STUDY_TIME_ASSESSMENT_SKILL.md`
+   - Use this before starting a new topic block when you are unsure if your timeline is realistic.
+   - This helps you check what can be learned in one day, what should be ignored today, and how to split larger topics into follow-up one-day slices.
+
+5. `PROGRESS_TRACKER_TEMPLATE.md`
    - Copy or reuse this for weekly tracking.
    - This helps you measure actual skill growth instead of only counting videos watched.
 
@@ -38,28 +42,43 @@ Daily use:
 
 1. Open `6_MONTH_ROUTINE.md`.
 2. Find the current week and current day.
-3. Open `DAILY_OFFENSIVE_TEMPLATE.md`.
-4. Execute the 6-hour routine.
-5. If the day has a specific topic, open `TOPIC_LEARNING_TEMPLATE.md`.
-6. End the day with one written output.
-7. End the week with `PROGRESS_TRACKER_TEMPLATE.md`.
+3. If you are unsure about your time estimate, open `STUDY_TIME_ASSESSMENT_SKILL.md`.
+4. Open `DAILY_OFFENSIVE_TEMPLATE.md`.
+5. Execute the 6-hour routine.
+6. If the day has a specific topic, open `TOPIC_LEARNING_TEMPLATE.md`.
+7. End the day with one written output.
+8. End the week with `PROGRESS_TRACKER_TEMPLATE.md`.
 
-Copy-paste prompt:
+General copy-paste prompt:
 
 ```text
-You are my offensive web security learning coach. I am following a 6-month web exploitation and bug bounty plan. I can study 6 hours today. My current level: beginner, comfortable with HTML and HTTP, brushing up JavaScript/cookies/sessions, new to backend logic and Burp Suite, currently around Natas level 2.
+You are my practical learning coach for [DOMAIN/SKILL]. I want to build real usable ability in this domain over the next 6 months, not just consume theory.
 
-Today's topic is: [TOPIC].
-Today's expected output is: [mini report / checklist / 5 labs / Burp workflow note].
+My current level:
+[Describe what I already know, what I am weak in, what tools/resources I have used, and any relevant background.]
 
-Create a practical 6-hour routine for today in exact order. Do not give generic theory. For each block, tell me:
-- what to learn
+My goal:
+[Describe the outcome I want in 6 months: job-ready, project-ready, certification-ready, freelance-ready, competition-ready, portfolio-ready, etc.]
+
+Available time:
+[Hours per day] for [number of days per week].
+
+Today's topic:
+[Specific topic I want to study today.]
+
+Today's expected output:
+[Example: solved labs, mini report, checklist, project artifact, case study, notes, practice problems, analysis report, tool workflow, portfolio piece.]
+
+Create a practical routine for today in exact order. Do not give a generic syllabus or motivation. For each block, tell me:
+- what to learn first
+- what to ignore for now
 - what to practice
-- what lab/source to use
-- what to do inside Burp
-- what notes to write
+- which resources/labs/projects/exercises to use
+- what tool actions to perform
+- what observations or notes to capture
 - what mistakes to avoid
 - what final artifact to produce
+- how to verify that I actually learned it
 
-Make the plan realistic for a beginner but aligned with job-ready web exploitation and bug bounty skills. Include a short end-of-day self-test.
+Make the plan realistic for my current level and aligned with my 6-month goal. If my topic is too broad for one day, narrow it to the most valuable one-day version and give follow-up steps.
 ```
