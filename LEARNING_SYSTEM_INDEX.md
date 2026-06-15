@@ -1,11 +1,13 @@
-# Offensive Cyber Learning System
+# Learning System Index
 
-This folder contains your repeatable learning system for web exploitation and bug bounty.
+This folder contains a repeatable learning system for building practical skill over a 2-3 month, 6-month, or custom timeline.
+
+Use this file as the control panel. It helps you map your goal, understand which files exist, and decide which file to open next.
 
 Use these files in this order:
 
 1. `6_MONTH_ROUTINE.md`
-   - Your fixed routine for the first 6 months.
+   - Your execution roadmap for a longer learning block.
    - Open this when you do not want to think about what to study next.
    - This gives topic order, weekly structure, and daily execution.
 
@@ -15,7 +17,7 @@ Use these files in this order:
    - This controls discipline, time, and consistency.
 
 3. `TOPIC_LEARNING_TEMPLATE.md`
-   - Use this whenever you study a specific topic such as IDOR, XSS, SQLi, CSRF, SSRF, authentication bugs, or business logic bugs.
+   - Use this whenever you study a specific topic, concept, vulnerability, tool, or subskill.
    - This controls depth and prevents shallow learning.
 
 4. `STUDY_TIME_ASSESSMENT_SKILL.md`
@@ -32,53 +34,54 @@ Do not ask, "Did I study today?"
 
 Ask:
 
-"Can I recognize, test, exploit in a lab, explain impact, and write a mini report for what I studied today?"
+"Did I produce proof that my skill improved?"
 
 That is the standard.
 
 ## How To Use This System
 
-Daily use:
+Goal-mapping use:
 
-1. Open `6_MONTH_ROUTINE.md`.
-2. Find the current week and current day.
-3. If you are unsure about your time estimate, open `STUDY_TIME_ASSESSMENT_SKILL.md`.
-4. Open `DAILY_OFFENSIVE_TEMPLATE.md`.
-5. Execute the 6-hour routine.
-6. If the day has a specific topic, open `TOPIC_LEARNING_TEMPLATE.md`.
-7. End the day with one written output.
-8. End the week with `PROGRESS_TRACKER_TEMPLATE.md`.
+1. Start with this file.
+2. Use the prompt below to create a high-level learning map.
+3. Use `STUDY_TIME_ASSESSMENT_SKILL.md` if your timeline or topic load may be unrealistic.
+4. Use `6_MONTH_ROUTINE.md` to convert the map into month, week, and day execution.
+5. Use `DAILY_OFFENSIVE_TEMPLATE.md` when you sit down for a study session.
+6. Use `TOPIC_LEARNING_TEMPLATE.md` when one topic needs focused depth.
+7. Use `PROGRESS_TRACKER_TEMPLATE.md` for weekly review.
 
-General copy-paste prompt:
+## Goal Mapping Prompt
 
 ```text
-You are my practical learning coach for [DOMAIN/SKILL]. I want to build real usable ability in this domain over the next 6 months, not just consume theory.
+You are my practical learning-system architect. Help me create a clear learning map for [DOMAIN/SKILL] over [TIME PERIOD: 2 months / 3 months / 6 months / custom].
 
 My current level:
-[Describe what I already know, what I am weak in, what tools/resources I have used, and any relevant background.]
+[Describe what I already know, what I am weak in, what I have practiced, and what tools/resources I have used.]
 
-My goal:
-[Describe the outcome I want in 6 months: job-ready, project-ready, certification-ready, freelance-ready, competition-ready, portfolio-ready, etc.]
+My target outcome:
+[Describe what I want to be capable of by the end: job-ready, project-ready, certification-ready, portfolio-ready, freelance-ready, competition-ready, etc.]
 
 Available time:
-[Hours per day] for [number of days per week].
+[Hours per day] for [days per week].
 
-Today's topic:
-[Specific topic I want to study today.]
+Resources I have:
+[Courses, books, labs, tools, playlists, platforms, mentors, communities, etc.]
 
-Today's expected output:
-[Example: solved labs, mini report, checklist, project artifact, case study, notes, practice problems, analysis report, tool workflow, portfolio piece.]
+Constraints:
+[Budget, language preference, weak fundamentals, exams, job schedule, hardware limits, internet limits, etc.]
 
-Create a practical routine for today in exact order. Do not give a generic syllabus or motivation. For each block, tell me:
-- what to learn first
-- what to ignore for now
-- what to practice
-- which resources/labs/projects/exercises to use
-- what tool actions to perform
-- what observations or notes to capture
-- what mistakes to avoid
-- what final artifact to produce
-- how to verify that I actually learned it
+Create a high-level learning map. Do not create a detailed daily routine yet.
 
-Make the plan realistic for my current level and aligned with my 6-month goal. If my topic is too broad for one day, narrow it to the most valuable one-day version and give follow-up steps.
+Give me:
+1. The correct learning phases for this timeline.
+2. What I should learn first, second, third, and why.
+3. Which topics are core, optional, or should be delayed.
+4. What practical outputs I should produce in each phase.
+5. What tools/resources I should use in each phase.
+6. What milestones should prove progress.
+7. What common mistakes I should avoid.
+8. How to know if my timeline is realistic.
+9. Which file I should use next: routine, daily template, topic template, time assessment, or progress tracker.
+
+Keep it practical, customizable, and focused on building usable skill rather than consuming theory.
 ```
