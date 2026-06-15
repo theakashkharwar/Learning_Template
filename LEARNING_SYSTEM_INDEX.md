@@ -53,7 +53,9 @@ Goal-mapping use:
 ## Goal Mapping Prompt
 
 ```text
-You are my practical learning-system architect. Help me create a clear learning map for [DOMAIN/SKILL] over [TIME PERIOD: 2 months / 3 months / 6 months / custom].
+You are my practical learning-system architect. Create a clear, realistic, high-precision learning map for [DOMAIN/SKILL] over [TIME PERIOD: 2 months / 3 months / 6 months / custom].
+
+Your job is not to motivate me or give a broad syllabus. Your job is to design a practical roadmap that a serious learner can follow and measure.
 
 My current level:
 [Describe what I already know, what I am weak in, what I have practiced, and what tools/resources I have used.]
@@ -70,18 +72,72 @@ Resources I have:
 Constraints:
 [Budget, language preference, weak fundamentals, exams, job schedule, hardware limits, internet limits, etc.]
 
-Create a high-level learning map. Do not create a detailed daily routine yet.
+Create a high-level learning map only. Do not create a detailed daily routine yet.
 
-Give me:
-1. The correct learning phases for this timeline.
-2. What I should learn first, second, third, and why.
-3. Which topics are core, optional, or should be delayed.
-4. What practical outputs I should produce in each phase.
-5. What tools/resources I should use in each phase.
-6. What milestones should prove progress.
-7. What common mistakes I should avoid.
-8. How to know if my timeline is realistic.
-9. Which file I should use next: routine, daily template, topic template, time assessment, or progress tracker.
+Rules:
+- Be brutally realistic about what can and cannot be achieved in the timeline.
+- Prioritize usable skill over theory consumption.
+- Prefer fewer topics with practice over many topics with shallow coverage.
+- Every phase must include practical outputs, not just topics to study.
+- Every milestone must be testable.
+- Do not include vague advice like "learn basics", "practice more", or "do projects" unless you define exactly what that means.
+- If the timeline is unrealistic, correct it and explain what can still be achieved.
+- Separate core topics, useful-but-secondary topics, and delayed topics.
+- Include self-assessment checkpoints so I can prove progress without a mentor.
 
-Keep it practical, customizable, and focused on building usable skill rather than consuming theory.
+Return the answer in this exact structure:
+
+1. Verdict On Timeline
+- Is the timeline realistic for the target outcome? Answer: Yes / Partly / No.
+- What level is realistically achievable by the end?
+- What level is not realistic yet?
+
+2. Phase Map
+- Split the timeline into 3-5 phases.
+- For each phase include:
+  - phase name
+  - week/month range
+  - main goal
+  - topics to learn in order
+  - why this phase comes here
+  - practical outputs
+  - tools/resources to use
+  - milestone to pass before moving on
+
+3. Topic Priority
+- Core: must learn for the goal.
+- Useful: learn if time remains or after core confidence.
+- Delay: avoid for now because ROI is low or prerequisites are missing.
+
+4. Practical Output Requirements
+- List the exact artifacts I should create during the plan.
+- Examples: reports, checklists, solved labs, projects, case studies, notes, portfolio pieces, workflows, mock tests.
+
+5. Self-Testing System
+- Give measurable checkpoints for 25%, 50%, 75%, and 100% completion.
+- Each checkpoint must answer: "What should I be able to do without help?"
+
+6. Mistakes And Corrections
+- List the top mistakes someone at my level will likely make.
+- For each mistake, give the correction.
+
+7. File Routing
+- Tell me which file to use next and why:
+  - `6_MONTH_ROUTINE.md` for converting the map into execution.
+  - `DAILY_OFFENSIVE_TEMPLATE.md` for daily sessions.
+  - `TOPIC_LEARNING_TEMPLATE.md` for one specific topic.
+  - `STUDY_TIME_ASSESSMENT_SKILL.md` for checking whether a topic or deadline is realistic.
+  - `PROGRESS_TRACKER_TEMPLATE.md` for weekly measurement.
+
+8. Quality Score
+- Score your own plan out of 100 for:
+  - practicality
+  - specificity
+  - timeline realism
+  - beginner suitability
+  - measurability
+  - alignment with my target outcome
+- If any score is below 90, revise the plan before finalizing.
+
+Keep the final answer practical, comparable, and decision-ready. It should produce a plan that two different AIs would make similarly because the structure, criteria, and output format are tightly defined.
 ```
