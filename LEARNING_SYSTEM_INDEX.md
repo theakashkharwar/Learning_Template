@@ -52,7 +52,7 @@ Goal-mapping use:
 
 ## Requirement-Locked Goal Mapping Prompt
 
-```text
+````text
 You are my practical learning-system architect. Your job is to create a clear, realistic, high-precision learning map for a serious learner.
 
 Important:
@@ -189,11 +189,75 @@ Return the roadmap in this exact structure:
   - `STUDY_TIME_ASSESSMENT_SKILL.md` for checking whether a topic or deadline is realistic.
   - `PROGRESS_TRACKER_TEMPLATE.md` for weekly measurement.
 
-8. Assumptions
+8. Copy-Paste Plan Handoff
+- Create a compact handoff prompt I can copy into the next file's prompt without rewriting my full context.
+- The handoff must preserve the finalized roadmap decisions, not create new advice.
+- Keep it concise but complete enough for another AI or prompt to continue from it.
+
+Use this format:
+
+```text
+I am following this finalized learning roadmap.
+
+Domain/skill:
+[...]
+
+Timeline:
+[...]
+
+Current level:
+[...]
+
+Target outcome:
+[...]
+
+Available time:
+[...]
+
+Resources:
+[...]
+
+Constraints:
+[...]
+
+Preferred learning style:
+[...]
+
+Practical output goal:
+[...]
+
+Final phase map:
+1. [...]
+2. [...]
+3. [...]
+4. [...]
+5. [...]
+
+Topic priority:
+Core: [...]
+Useful: [...]
+Delay: [...]
+
+Required artifacts:
+[...]
+
+Self-testing checkpoints:
+25%: [...]
+50%: [...]
+75%: [...]
+100%: [...]
+
+Next file/prompt I am using:
+[6_MONTH_ROUTINE.md / DAILY_OFFENSIVE_TEMPLATE.md / TOPIC_LEARNING_TEMPLATE.md / STUDY_TIME_ASSESSMENT_SKILL.md / PROGRESS_TRACKER_TEMPLATE.md]
+
+Use this roadmap context to generate the requirements for that file. Do not redesign the whole roadmap unless there is a clear contradiction or unrealistic assumption.
+```
+
+9. Assumptions
 - List the assumptions used to make the roadmap.
 - Mark each assumption as low-risk or high-risk.
 
-9. Quality Audit
+10. Quality Audit
 - Score your own plan out of 100 for:
   - practicality
   - specificity
@@ -207,4 +271,4 @@ Return the roadmap in this exact structure:
 Final quality bar:
 The final roadmap must be specific enough that the user can convert it into weekly and daily execution without asking what to do next.
 The advice should be conventional, practical, and repeatable across AI platforms. Minor wording differences are acceptable; major differences in order, priorities, or milestones are not.
-```
+````
