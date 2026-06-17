@@ -50,12 +50,22 @@ Goal-mapping use:
 6. Use `TOPIC_LEARNING_TEMPLATE.md` when one topic needs focused depth.
 7. Use `PROGRESS_TRACKER_TEMPLATE.md` for weekly review.
 
-## Goal Mapping Prompt
+## Requirement-Locked Goal Mapping Prompt
 
 ```text
-You are my practical learning-system architect. Create a clear, realistic, high-precision learning map for [DOMAIN/SKILL] over [TIME PERIOD: 2 months / 3 months / 6 months / custom].
+You are my practical learning-system architect. Your job is to create a clear, realistic, high-precision learning map for a serious learner.
 
-Your job is not to motivate me or give a broad syllabus. Your job is to design a practical roadmap that a serious learner can follow and measure.
+Important:
+Do not immediately create a roadmap unless the requirements are clear enough.
+First lock the requirements. Then create the roadmap.
+Your output must be practical, measurable, and consistent enough that another AI following this same prompt would produce nearly the same advice.
+
+User input:
+Domain/skill:
+[Example: web exploitation, red teaming, stock analysis, backend development, data analysis, etc.]
+
+Timeline:
+[Example: 2 months / 3 months / 6 months / custom]
 
 My current level:
 [Describe what I already know, what I am weak in, what I have practiced, and what tools/resources I have used.]
@@ -72,25 +82,72 @@ Resources I have:
 Constraints:
 [Budget, language preference, weak fundamentals, exams, job schedule, hardware limits, internet limits, etc.]
 
-Create a high-level learning map only. Do not create a detailed daily routine yet.
+Preferred learning style:
+[Example: video first, labs first, reading first, project based, mixed, etc.]
 
-Rules:
+Practical output goal:
+[Example: reports, solved labs, projects, case studies, portfolio pieces, mock tests, workflows, checklists, etc.]
+
+Success criteria:
+[Describe how I will know the plan worked.]
+
+Core rules:
+- Stage 1 comes before Stage 2.
+- Do not create a detailed daily routine. This prompt is for high-level mapping only.
 - Be brutally realistic about what can and cannot be achieved in the timeline.
 - Prioritize usable skill over theory consumption.
 - Prefer fewer topics with practice over many topics with shallow coverage.
-- Every phase must include practical outputs, not just topics to study.
-- Every milestone must be testable.
+- If internet access is available, investigate and compare public roadmaps, learning advice, and topic ordering from reputable security educators/practitioners before finalizing the plan. Use sources such as NahamSec, NetworkChuck, Ryan Montgomery, John Hammond, Ashish Bhawani, Loi Liang Yang, PortSwigger, OWASP, HackerOne/Bugcrowd education, HackTricks, HTB Academy, TryHackMe, and other respected domain-specific practitioners.
+- Do not blindly copy any one creator's roadmap. Extract the common consensus, remove hype, and adapt it to the user's current level, timeline, constraints, and target outcome.
+- If internet access is not available, state that limitation and rely on widely accepted industry learning order instead of pretending current creator-specific roadmap research was performed.
 - Do not include vague advice like "learn basics", "practice more", or "do projects" unless you define exactly what that means.
-- If the timeline is unrealistic, correct it and explain what can still be achieved.
-- Separate core topics, useful-but-secondary topics, and delayed topics.
-- Include self-assessment checkpoints so I can prove progress without a mentor.
+- Use the conventional, widely accepted learning order for the domain unless the user gives a strong reason to do otherwise.
+- Do not over-customize from weak evidence. If an input is unclear, ask or state a conservative default.
+- If the timeline is unrealistic, correct the target outcome instead of flattering the user.
+- Every phase must include artifacts, tools/resources, measurable checkpoints, and pass/fail milestones.
+- Every checkpoint must be testable without a mentor.
 
-Return the answer in this exact structure:
+Stage 1: Requirement Intake
+
+Check whether these required inputs are present:
+1. Domain/skill
+2. Timeline
+3. Current level
+4. Target outcome
+5. Available time
+6. Resources
+7. Constraints
+8. Preferred learning style
+9. Practical output goal
+10. Success criteria
+
+If any critical input is missing, do not create the roadmap yet.
+
+For incomplete input, respond only with:
+
+1. Missing Critical Information
+- List only the missing or unclear items.
+
+2. Requirement Questions
+- Ask up to 10 questions.
+- Ask only questions needed to make the plan accurate.
+- Do not ask questions already answered by the user.
+
+3. Recommended Defaults
+- Give conservative defaults the user can accept if they do not want to answer every question.
+
+If enough information is present, continue to Stage 2.
+Before planning, list any assumptions you are making.
+
+Stage 2: Roadmap Generation
+
+Return the roadmap in this exact structure:
 
 1. Verdict On Timeline
 - Is the timeline realistic for the target outcome? Answer: Yes / Partly / No.
 - What level is realistically achievable by the end?
 - What level is not realistic yet?
+- If the target is unrealistic, give the corrected target for this timeline.
 
 2. Phase Map
 - Split the timeline into 3-5 phases.
@@ -102,7 +159,8 @@ Return the answer in this exact structure:
   - why this phase comes here
   - practical outputs
   - tools/resources to use
-  - milestone to pass before moving on
+  - measurable checkpoint
+  - pass/fail milestone before moving on
 
 3. Topic Priority
 - Core: must learn for the goal.
@@ -112,10 +170,12 @@ Return the answer in this exact structure:
 4. Practical Output Requirements
 - List the exact artifacts I should create during the plan.
 - Examples: reports, checklists, solved labs, projects, case studies, notes, portfolio pieces, workflows, mock tests.
+- Each artifact must prove a real skill, not just show that I consumed content.
 
 5. Self-Testing System
 - Give measurable checkpoints for 25%, 50%, 75%, and 100% completion.
 - Each checkpoint must answer: "What should I be able to do without help?"
+- Each checkpoint must include a pass/fail test.
 
 6. Mistakes And Corrections
 - List the top mistakes someone at my level will likely make.
@@ -129,15 +189,22 @@ Return the answer in this exact structure:
   - `STUDY_TIME_ASSESSMENT_SKILL.md` for checking whether a topic or deadline is realistic.
   - `PROGRESS_TRACKER_TEMPLATE.md` for weekly measurement.
 
-8. Quality Score
+8. Assumptions
+- List the assumptions used to make the roadmap.
+- Mark each assumption as low-risk or high-risk.
+
+9. Quality Audit
 - Score your own plan out of 100 for:
   - practicality
   - specificity
   - timeline realism
-  - beginner suitability
   - measurability
+  - beginner fit
   - alignment with my target outcome
 - If any score is below 90, revise the plan before finalizing.
+- If you revised the plan, show only the revised final version.
 
-Keep the final answer practical, comparable, and decision-ready. It should produce a plan that two different AIs would make similarly because the structure, criteria, and output format are tightly defined.
+Final quality bar:
+The final roadmap must be specific enough that the user can convert it into weekly and daily execution without asking what to do next.
+The advice should be conventional, practical, and repeatable across AI platforms. Minor wording differences are acceptable; major differences in order, priorities, or milestones are not.
 ```
